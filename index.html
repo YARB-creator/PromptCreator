@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PromptAI — Générateur de prompts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="logo">PromptAI</div>
+      <p>Crée des prompts détaillés en quelques secondes.</p>
+    </header>
+
+    <section class="card">
+      <label for="idea">Décris ce que tu veux créer</label>
+      <textarea id="idea" placeholder="Exemple : une vidéo d'horreur dans une maison abandonnée..."></textarea>
+
+      <div class="options">
+        <div>
+          <label for="type">Type</label>
+          <select id="type">
+            <option value="image">Image</option>
+            <option value="video">Vidéo</option>
+            <option value="texte">Texte / histoire</option>
+            <option value="pub">Publicité</option>
+          </select>
+        </div>
+        <div>
+          <label for="style">Style</label>
+          <select id="style">
+            <option value="cinématographique">Cinématographique</option>
+            <option value="réaliste">Réaliste</option>
+            <option value="artistique">Artistique</option>
+            <option value="sombre">Sombre / horreur</option>
+            <option value="futuriste">Futuriste</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="generate">✨ Générer le prompt</button>
+    </section>
+
+    <section class="result card" id="resultCard" hidden>
+      <div class="result-head">
+        <h2>Ton prompt</h2>
+        <button id="copy">Copier</button>
+      </div>
+      <pre id="result"></pre>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
